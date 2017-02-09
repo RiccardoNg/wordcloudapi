@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		
+		<h1>THIS IS REQUEST FORM</h1>
+		
+
+		
+		<form id="request-form" method="POST" action="/api">
+			<label for="agemin">Age min?</label>
+			<input type="text" name="agemin" value="<%= qs.agemin = 18 %>"><br>
+			<label for="agemax">Age max?</label>
+			<input type="text" name="agemax" value="<%= qs.agemax = 65 %>"><br>
+			<label for="position">Position?</label>
+			<input type="text" name="position" value="<%= qs.position = 'feed instant_article'%>"><br>
+			<label for="platform">Platform?</label>
+			<input type="text" name="platform" value="<%= qs.platform = 'facebook audience_network'%>"><br>
+			<label for="message">Message?</label>
+			<input type="text" name="message" value="<%= qs.message = 'mưa gió khỏi lo vì đã có ô gấp ngược thông number với thiết kế đóng dù sáng tạo đồng thời chất liệu dù không thấm nước chia làm number lớp thông minh bạn sẽ không còn phải lo lắng bị ướt mỗi khi trời mưa nữa click xem number'%>"><br>
+			<label for="description">Description?</label>
+			<input type="text" name="description" value="<%= qs.description %>"><br>
+			<label for="calltoaction">Call_to_action?</label>
+			<input type="text" name="calltoaction" value="<%= qs.calltoaction = 'WATCH_MORE' %>"><br>
+			<input type="submit" value="submit"/>
+		</form>
+	</body>
+</html>
