@@ -8,21 +8,26 @@
 		
 
 		
-		<form id="request-form" method="POST" action="/api">
-			<label for="agemin">Age min?</label>
-			<input type="text" name="agemin" value="<%= qs.agemin = 18 %>"><br>
-			<label for="agemax">Age max?</label>
-			<input type="text" name="agemax" value="<%= qs.agemax = 65 %>"><br>
-			<label for="position">Position?</label>
-			<input type="text" name="position" value="<%= qs.position = 'feed instant_article'%>"><br>
-			<label for="platform">Platform?</label>
-			<input type="text" name="platform" value="<%= qs.platform = 'facebook audience_network'%>"><br>
-			<label for="message">Message?</label>
-			<input type="text" name="message" value="<%= qs.message = 'mưa gió khỏi lo vì đã có ô gấp ngược thông number với thiết kế đóng dù sáng tạo đồng thời chất liệu dù không thấm nước chia làm number lớp thông minh bạn sẽ không còn phải lo lắng bị ướt mỗi khi trời mưa nữa click xem number'%>"><br>
-			<label for="description">Description?</label>
-			<input type="text" name="description" value="<%= qs.description %>"><br>
-			<label for="calltoaction">Call_to_action?</label>
-			<input type="text" name="calltoaction" value="<%= qs.calltoaction = 'WATCH_MORE' %>"><br>
+		<form id="request-form" method="POST" action="/evaluateInput">
+			<label for="agemin">agemin</label>
+			<input type="text" name="agemin" value="<%= qs.agemin ? qs.agemin : 18 %>"><br>
+			<label for="agemax">agemax</label>
+			<input type="text" name="agemax" value="<%= qs.agemax ? qs.agemax : 65 %>"><br>
+			<label for="position">position</label>
+			<input type="text" name="position" value="<%= qs.position ? qs.position : 'feed instant_article'%>">
+			<label for="position" style="color:grey;"><i>feed right_hand_column instant_article</i></label><br>
+			<label for="platform">platform</label>
+			<input type="text" name="platform" value="<%= qs.platform ? qs.platform : 'facebook audience_network'%>">
+			<label for="platform" style="color:grey;"><i>facebook instagram audience_network</i></label><br>
+			<label for="message">message</label>
+			<input type="text" name="message" value="<%= qs.message ? qs.message : 'mưa gió khỏi lo vì đã có ô gấp ngược thông number với thiết kế đóng dù sáng tạo đồng thời chất liệu dù không thấm nước chia làm number lớp thông minh bạn sẽ không còn phải lo lắng bị ướt mỗi khi trời mưa nữa click xem number'%>">
+			<label for="message" style="color:red;"><i>REGEX warning!</i></label>
+			<br>
+			<label for="description">description</label>
+			<input type="text" name="description" value="<%= qs.description ? qs.description : ''%>"><br>
+			<label for="call_to_action">call_to_action</label>
+			<input type="text" name="call_to_action" value="<%= qs.call_to_action ? qs.call_to_action : 'WATCH_MORE' %>">
+			<label for="call_to_action" style="color:grey;"><i>WATCH_MORE DOWNLOAD SIGN_UP LEARN_MORE</i></label><br>
 			<input type="submit" value="submit"/>
 		</form>
 	</body>
